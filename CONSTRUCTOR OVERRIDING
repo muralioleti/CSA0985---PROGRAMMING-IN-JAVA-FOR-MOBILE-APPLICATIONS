@@ -1,0 +1,16 @@
+class company {
+    void display() {
+        System.out.println("in company");
+    }
+}
+class branch {
+    void display() {
+        System.out.println("in branch");
+    }
+}
+class overriding {
+    public static void main(String args[]) {
+         branch d1 = new branch();
+        d1.display();
+    }
+}
