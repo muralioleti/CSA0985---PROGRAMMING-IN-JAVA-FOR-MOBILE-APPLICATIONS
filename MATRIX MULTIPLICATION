@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.io.*;
+public class multi {
+    public static void main(String args[]) {
+        int MAX = 10;
+        int a[][] = new int[MAX][MAX];
+        int b[][] = new int[MAX][MAX];
+        int mul[][] = new int[MAX][MAX];
+        int i,j,k,rows,columns,c;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the number of rows:");
+        rows = sc.nextInt();
+        System.out.println("enter the number of columns:");
+        columns = sc.nextInt();
+        System.out.println("enter the first matrix:");
+        for(i=0;i<rows;i++)
+        {
+            for(j=0;j<columns;j++)
+            {
+                a[i][j] = sc.nextInt();
+        }
+    }
+    System.out.println("enter the second matrix:");
+    for(i=0;i<rows;i++)
+    {
+        for(j=0;j<columns;j++)
+        {
+            b[i][j] = sc.nextInt();
+        }
+    }
+    c = columns;
+    System.out.println("multiply matrix is:");
+    for(i=0;i<rows;i++)
+    {
+        for(j=0;j<columns;j++)
+        {
+            mul[i][j] = 0;
+            for(k=0;k<c;k++)
+            {
+                mul[i][j]+=a[i][k]*b[k][j];
+            }
+            System.out.print(mul[i][j]+" ");
+        }
+        System.out.println();
+    }
+    }
+}
